@@ -71,6 +71,7 @@ npm run build
 
 ```
 shopnow-ecommerce/
+├── database/               # Database scripts and schema
 ├── public/                 # Public assets
 ├── src/
 │   ├── components/         # Reusable UI components
@@ -94,15 +95,17 @@ shopnow-ecommerce/
 
 ## 🛠️ Supabase Database Schema
 
-The application uses the following tables in Supabase:
+The application uses several tables in Supabase to manage data. The complete schema can be found in `/database/schema.sql`. Below is an overview of the main tables:
 
-1. **users** - Managed by Supabase Auth
-2. **profiles** - Extended user information
-3. **products** - Product details
-4. **categories** - Product categories
-5. **orders** - Order information
-6. **order_items** - Items within orders
-7. **cart_items** - Shopping cart items
+1. **profiles** - User profile information extending Supabase auth
+2. **products** - Product details including name, price, and inventory
+3. **categories** - Product categorization
+4. **orders** - Order details including shipping and status
+5. **order_items** - Individual items within orders
+6. **cart_items** - Shopping cart contents for users
+7. **product_reviews** - Customer ratings and comments for products
+
+For a detailed view of the database schema including relationships, constraints, and indexes, please refer to the schema file.
 
 ## 🚀 Deployment
 
